@@ -31,15 +31,15 @@ function successFunction(data) {
       table += '<tr>';
     }
     const rowCells = allRows[singleRow].split(',');
-    console.log(rowCells);
+    console.log(rowCells[0].replace(/[^a-zа-яё0-9\s]/gi, ' '));
     for (let rowCell = 0; rowCell < rowCells.length; rowCell++) {
       if (singleRow === 0) {
         table += '<th>';
-        table += rowCells[rowCell];
+        table += rowCells[rowCell].replace(/[^a-zа-яё0-9\s]/gi, ' ');
         table += '</th>';
       } else {
         table += '<td>';
-        table += rowCells[rowCell];
+        table += rowCells[rowCell].replace(/[^a-zа-яё0-9\s]/gi, ' ');
         table += '</td>';
       }
     }
